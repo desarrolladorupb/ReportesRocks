@@ -1,0 +1,141 @@
+{% extends 'base/base.html' %}
+
+{% load staticfiles %}
+
+{% block ExtraHead %}
+
+
+<script type="text/javascript" src="{% static '/js/ReportesOGV/index.js' %}"></script>
+
+{% endblock %}
+
+{% block Title %}
+	Reportes OGV
+{% endblock %}
+
+{% block Content %}
+	<div class="row">
+		<div class="col s12">
+			<h4>Seleccione comite:</h4> <select id="cmbComites" style="width: 80%"></select>
+		</div>
+		
+		<div class="col s6 m6 l6">
+				<input type="date" class="datepicker" id="txtFechaInicio" placeholder="Fecha Inicio">
+		</div>
+		<div class="col s6 s6 m6 l6">			
+			<input type="date" class="datepicker" id="txtFechaFin" placeholder="Fecha Fin">			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12">
+			<ul class="tabs">
+				<li class="tab col s2"><a class="active" href="#tabStatus">Status</a></li>
+				<li class="tab col s2"><a href="#tabSeguimiento">Seguimiento</a></li>				
+				<li class="tab col s3"><a href="#tabEpMeeting">Ep meeting</a></li>
+				<li class="tab col s2"><a href="#tabApproved">Approved X Universidad</a></li>
+				<li class="tab col s3"><a href="#tabTasaConversion">Tasa de conversion</a></li>
+			</ul>
+		</div>
+		<div id="tabStatus" class="col s12">
+			<div class="col s4 l4 m4">
+				<table id="tblStatus" class="display" cellspacing="0" width="100%">
+			        <thead>
+			            <tr>
+			                <th>Status</th>
+			                <th>Valor</th>
+			                <th>Porcentaje</th>
+			                
+			            </tr>
+			        </thead>
+			        <tbody>
+			            
+			        </tbody>
+			    </table>
+			</div>
+			<div class="col s8 l8 m8">
+				<div id="piechartStatus" style="width: 900px ; height: 500px;"></div>
+			</div>
+		</div>
+		<div id="tabSeguimiento" class="col s12">
+			<div class="col s4 l4 m4">
+				<table id="tblSeguimiento" class="display" cellspacing="0" width="100%">
+			        <thead>
+			            <tr>
+			                <th>Seguimiento</th>
+			                <th>Valor</th>
+			                <th>Porcentaje</th>
+			                
+			            </tr>
+			        </thead>
+			        <tbody>
+			            
+			        </tbody>
+			    </table>
+			</div>
+			<div class="col s8 l8 m8">
+				<div id="piechartSeguimiento" style="width: 900px; height: 500px;"></div>
+			</div>
+		</div>
+		<div id="tabEpMeeting" class="col s12">
+			<div class="col s4 l4 m4">
+				<table id="tblEpMeeting" class="display" cellspacing="0" width="100%">
+			        <thead>
+			            <tr>
+			                <th>EP Meeting</th>
+			                <th>Valor</th>
+			                <th>Porcentaje</th>
+			                
+			            </tr>
+			        </thead>
+			        <tbody>
+			            
+			        </tbody>
+			    </table>
+			</div>
+			<div class="col s8 l8 m8">
+				<div id="piechartEpMeeting" style="width: 900px; height: 500px;"></div>
+			</div>
+		</div>
+		<div id="tabApproved" class="col s12">
+			<div class="col s4 l4 m4">
+				<table id="tblApprovedUniversidad" class="display" cellspacing="0" width="100%">
+			        <thead>
+			            <tr>
+			                <th>Universidad</th>
+			                <th>Valor</th>
+			                <th>Porcentaje</th>
+			                
+			            </tr>
+			        </thead>
+			        <tbody>
+			            
+			        </tbody>
+			    </table>
+			</div>
+			<div class="col s8 l8 m8">
+				<div id="piechartApproved" style="width: 900px; height: 500px;"></div>
+			</div>
+		</div>
+		<div id="tabTasaConversion" class="col s12">
+			<div class="col s4 l4 m4">
+				<table id="tblTasaConversion" class="display" cellspacing="0" width="100%">
+			        <thead>
+			            <tr>
+			                <th>Status</th>
+			                <th>Numero</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			            
+			        </tbody>
+			    </table>
+			</div>
+			<div class="col s8 l8 m8">
+				<div id="piechartTasaConversion" style="width: 900px; height: 500px;"></div>
+			</div>
+
+		</div>
+	
+	</div>
+
+{% endblock %}

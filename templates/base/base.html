@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+	
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/sweetalert.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/select2.min.css' %}">
+
+	<script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript" src="{% static 'js/Librerias/sweetalert.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/Librerias/select2.full.min.js' %}"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/b-1.3.1/b-colvis-1.3.1/b-flash-1.3.1/b-html5-1.3.1/b-print-1.3.1/cr-1.3.3/datatables.min.css"/>
+ 
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/b-1.3.1/b-colvis-1.3.1/b-flash-1.3.1/b-html5-1.3.1/b-print-1.3.1/cr-1.3.3/datatables.min.js"></script>
+
+
+
+	{% block ExtraHead %} {% endblock %}
+
+	<title>{% block Title%} {% endblock %}</title>
+	
+</head>
+<body>
+	{% block Header %} 
+	<nav>
+	    <div class="nav-wrapper">
+	      <a href="#" class="brand-logo center">Reportes UPB</a>
+	      <ul id="nav-mobile" class="rleft hide-on-med-and-down">
+	        <li id="menuOGV"><a  href="/reportes_ogv">Reporte OGV</a></li>	        
+	        <li id="menuOGT"><a  href="/reportes_ogt">Reporte OGT</a></li>
+	        <li id="menuOGE"><a  href="/reportes_oge">Reporte OGE</a></li>
+	        <li id="menuUR"><a  href="collapsible.html">Reportes UR</a></li>
+	      </ul>
+	    </div>
+  	</nav>
+	{% endblock %}
+	<div class="had-container">
+        {% block Content %}
+			<p>este el contenido de  la pagina</p>
+		{% endblock %}
+     </div>
+	
+
+	
+
+
+</body> 
+</html>
